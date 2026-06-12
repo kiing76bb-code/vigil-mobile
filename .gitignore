@@ -39,3 +39,6 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# local secrets (anon key is publishable, but keep env out of git)
+.env

@@ -1,17 +1,21 @@
 {
   "expo": {
-    "name": "vigil-mobile",
+    "name": "Vigil",
     "slug": "vigil-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "scheme": "vigil",
+    "backgroundColor": "#0B0F19",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.blandcreative.vigil"
     },
     "android": {
+      "package": "com.blandcreative.vigil",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#0B0F19",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -20,6 +24,15 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-status-bar",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Vigil uses the camera to scan product barcodes so you can track prices instantly."
+        }
+      ]
+    ]
   }
 }
